@@ -1,0 +1,67 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-layout{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(5, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+}
+
+.display{
+    display: table;
+    grid-column: 1 / -1;
+    background-color: darkgray;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.smallNumbers{
+    display: flex;
+    justify-content: end;
+    color: white;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.largeNumber{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    color: white;
+    padding-right: 5px;
+    padding-top: 10px;
+    font-size: 60px;
+}
+
+.grid-layout > button {
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: #ffffff7e;
+    height: 100px;
+    font-size: 1em;
+}
+
+.large-btn{
+    grid-column: span 2;
+}
+
+.grid-layout > button:hover{
+    background-color: #CAF0F8;
+}
+
+
